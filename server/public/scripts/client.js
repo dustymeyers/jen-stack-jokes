@@ -5,7 +5,7 @@ $(document).ready(onReady);
 function onReady() {
   console.log('DOM ready');
   fetchJokes();
-  $('#addJokeButton').on('click', addNewJoke);
+  $('#addJokeButton').on('click', '#addJokeForm', addNewJoke);
 }
 
 function addNewJoke() {
