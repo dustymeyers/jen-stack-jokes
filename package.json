@@ -17,7 +17,15 @@
   "author": "PrimeAcademy",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.15.2",
-    "express": "^4.14.0"
-  }
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dustymeyers/jen-stack-jokes.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dustymeyers/jen-stack-jokes/issues"
+  },
+  "homepage": "https://github.com/dustymeyers/jen-stack-jokes#readme"
 }
