@@ -19,7 +19,7 @@ function fetchJokes() {
             <blockquote>
               <p class="jokeQuestionOut">"${joke.jokeQuestion}"</p>
               <p class="punchLineOut">"${joke.punchLine}"<p>
-              <p class="whosJokeOut">-- By ${joke.whoseJoke}<p>
+              <p class="whoseJokeOut">-- By ${joke.whoseJoke}<p>
             </blockquote>
           </li>
       `);
