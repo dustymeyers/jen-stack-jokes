@@ -5,6 +5,27 @@ $(document).ready(onReady);
 function onReady() {
   console.log('DOM ready');
   fetchJokes();
+  $('#addJokeButton').on('click', addNewJoke);
+}
+
+function addNewJoke() {
+  console.log('in addNewJoke');
+  let whoseJoke = $('#whoseJokeIn').val();
+  let jokeQuestion = $('#questionIn').val();
+  let punchLine = $('#punchlineIn').val();
+  $.ajax({
+    data: {
+      joke_to_add: {
+        whoseJoke,
+        jokeQuestion,
+        punchLine,
+      },
+    },
+    url: '/joke',
+    method: 'POST',
+  }).then(function () {
+    console.log('Joke submitted');
+  });
 }
 
 function fetchJokes() {
