@@ -1,3 +1,39 @@
 body {
   background-color: #2ec4b6;
+  margin: 0;
+  padding: 1em;
+}
+
+h1 {
+  text-align: center;
+}
+/* Classes */
+.entireJokeOut {
+  background-color: rgba(255, 191, 105, 0.5);
+  padding: 1em;
+  margin: 1em 0;
+}
+
+.jokeQuestionOut {
+  font-size: 1.5em;
+  font-style: oblique;
+  font-weight: bold;
+}
+
+.punchLineOut {
+  font-style: oblique;
+}
+
+.whoseJokeOut {
+  font-size: 1.25em;
+  font-weight: bold;
+}
+/* IDs */
+#addJokeForm {
+  margin: auto;
+  width: 50%;
+}
+
+#outputDiv {
+  list-style-type: none;
 }

@@ -43,7 +43,7 @@ function fetchJokes() {
       for (let joke of jokeHistory) {
         $('#outputDiv').append(`
           <li>
-            <blockquote>
+            <blockquote class="entireJokeOut">
               <p class="jokeQuestionOut">"${joke.jokeQuestion}"</p>
               <p class="punchLineOut">"${joke.punchLine}"</p>
               <p class="whoseJokeOut">-- By ${joke.whoseJoke}</p>
