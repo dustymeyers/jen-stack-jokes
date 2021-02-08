@@ -4,6 +4,10 @@ $(document).ready(onReady);
 
 function onReady() {
   console.log('DOM ready');
+  fetchJokes();
+}
+
+function fetchJokes() {
   $.ajax({
     url: '/jokes',
     method: 'GET',
