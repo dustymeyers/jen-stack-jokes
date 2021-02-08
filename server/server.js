@@ -2,7 +2,8 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const PORT = 5000;
-
+// use bodyParser to digest json data
+app.use(bodyParser.json());
 // use bodyParser.urlencoded throughout the app with this:
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -44,4 +45,9 @@ app.listen(PORT, () => {
 app.get('/jokes', function (req, res) {
   console.log('GET Request for jokes');
   res.send(jokes);
+});
+
+app.post('/joke', function (req, res) {
+  console.log('POST Request for joke', req.body);
+  res.sendStatus(201);
 });
