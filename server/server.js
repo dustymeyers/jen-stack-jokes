@@ -48,6 +48,17 @@ app.get('/jokes', function (req, res) {
 });
 
 app.post('/joke', function (req, res) {
-  console.log('POST Request for joke', req.body);
-  res.sendStatus(201);
+  console.log('POST Request for joke');
+  if (req.body.joke_to_add === undefined) {
+    console.log('Oops, missing joke_to_add');
+    // 400 === You're missing something
+    res.sendStatus(400);
+    return;
+  } else {
+    // set a variable for the object we are receiving
+    let newJoke = req.body.joke_to_add;
+    console.log('This is our newJoke:', newJoke);
+    jokes.push(newJoke);
+    res.sendStatus(201);
+  }
 });
