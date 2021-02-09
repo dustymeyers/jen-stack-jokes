@@ -14,6 +14,9 @@ function addNewJoke(evt) {
   let whoseJoke = $('#whoseJokeIn').val();
   let jokeQuestion = $('#questionIn').val();
   let punchLine = $('#punchlineIn').val();
+  $('#whoseJokeIn').val('');
+  $('#questionIn').val('');
+  $('#punchlineIn').val('');
   $.ajax({
     data: {
       joke_to_add: {
