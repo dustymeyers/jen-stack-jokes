@@ -42,12 +42,12 @@ app.listen(PORT, () => {
   console.log('server running on: ', PORT);
 }); // end spin up server
 
-app.get('/jokes', function (req, res) {
+app.get('/jokes', (req, res) => {
   console.log('GET Request for jokes');
   res.send(jokes);
 });
 
-app.post('/joke', function (req, res) {
+app.post('/joke', (req, res) => {
   console.log('POST Request for joke');
   if (req.body.joke_to_add === undefined) {
     console.log('Oops, missing joke_to_add');
