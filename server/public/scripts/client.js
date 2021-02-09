@@ -5,14 +5,18 @@ $(document).ready(onReady);
 function onReady() {
   console.log('DOM ready');
   fetchJokes();
-  $('#addJokeButton').on('click', '#addJokeForm', addNewJoke);
+  $('#addJokeButton').on('click', addNewJoke);
 }
 
-function addNewJoke() {
+function addNewJoke(evt) {
+  evt.preventDefault();
   console.log('in addNewJoke');
   let whoseJoke = $('#whoseJokeIn').val();
   let jokeQuestion = $('#questionIn').val();
   let punchLine = $('#punchlineIn').val();
+  $('#whoseJokeIn').val('');
+  $('#questionIn').val('');
+  $('#punchlineIn').val('');
   $.ajax({
     data: {
       joke_to_add: {
